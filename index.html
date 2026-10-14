@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishna Kumar — Senior Software Engineer</title>
+<meta name="description" content="Krishna Kumar, Senior Software Engineer: .NET, PostgreSQL and AWS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3ede2;--ink:#1f1a14;--soft:#6e6558;--rule:#d8cebc;
+    --hot:#d9480f;--panel:#1f1a14;--panel-ink:#f3ede2;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#14110d;--ink:#efe7d8;--soft:#9c9282;--rule:#2e2820;--hot:#ff8a4c;--panel:#efe7d8;--panel-ink:#14110d}
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font:17px/1.7 Inter,system-ui,sans-serif}
+  a{color:inherit}
+  .mono{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.04em}
+
+  /* two-column: fixed identity panel + scrolling story */
+  .layout{display:grid;grid-template-columns:340px 1fr;min-height:100vh}
+  aside{position:sticky;top:0;height:100vh;background:var(--panel);color:var(--panel-ink);padding:48px 36px;display:flex;flex-direction:column;justify-content:space-between}
+  .avatar{width:96px;height:96px;border-radius:50% 50% 50% 8px;background:var(--hot);display:grid;place-items:center;font:600 2.2rem Fraunces,serif;color:var(--panel)}
+  aside h1{font:600 2.3rem/1.05 Fraunces,serif;margin:28px 0 10px}
+  aside p.sub{opacity:.75;font-size:.95rem}
+  aside nav{display:flex;flex-direction:column;gap:6px;margin-top:32px}
+  aside nav a{text-decoration:none;opacity:.7;padding:2px 0}
+  aside nav a:hover{opacity:1;color:var(--hot)}
+  aside nav a::before{content:"→ ";opacity:0}
+  aside nav a:hover::before{opacity:1}
+  .socials{display:flex;gap:16px;flex-wrap:wrap}
+  .socials a{text-decoration:none;border-bottom:1px solid currentColor;opacity:.8}
+  .socials a:hover{color:var(--hot);opacity:1}
+
+  main{padding:72px 8vw 40px 7vw;max-width:900px}
+  section{margin-bottom:96px}
+  .eyebrow{color:var(--hot);margin-bottom:14px;display:block}
+  h2{font:400 clamp(1.8rem,3.4vw,2.6rem)/1.15 Fraunces,serif;margin-bottom:28px;letter-spacing:-.01em}
+  h2 em{font-style:italic;color:var(--hot)}
+  .lead{font:400 1.35rem/1.55 Fraunces,serif}
+
+  /* projects: numbered rows that expand on hover */
+  .proj{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:baseline;padding:22px 0;border-top:1px solid var(--rule);text-decoration:none;transition:padding .2s}
+  .proj:last-child{border-bottom:1px solid var(--rule)}
+  .proj:hover{padding-left:12px}
+  .proj:hover h3{color:var(--hot)}
+  .proj .n{color:var(--soft)}
+  .proj h3{font:600 1.35rem Fraunces,serif;transition:color .2s}
+  .proj p{color:var(--soft);font-size:.95rem;margin-top:2px}
+  .proj .stack{color:var(--soft);text-align:right}
+
+  /* experience: vertical timeline */
+  .timeline{border-left:2px solid var(--rule);padding-left:28px;display:grid;gap:32px}
+  .step{position:relative}
+  .step::before{content:"";position:absolute;left:-36px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 4px var(--bg)}
+  .step h3{font:600 1.15rem Fraunces,serif}
+  .step .when{color:var(--soft)}
+  .step p{margin-top:6px;color:var(--soft)}
+
+  .tools{display:flex;flex-wrap:wrap;gap:10px}
+  .tools span{font-family:"JetBrains Mono",monospace;font-size:.82rem;padding:6px 12px;border:1px solid var(--rule);border-radius:6px}
+  .tools span:hover{background:var(--hot);color:var(--bg);border-color:var(--hot)}
+
+  .big-mail{display:inline-block;font:400 clamp(1.6rem,4vw,2.8rem) Fraunces,serif;text-decoration:none;border-bottom:3px solid var(--hot);padding-bottom:4px}
+  .big-mail:hover{color:var(--hot)}
+  footer{color:var(--soft);padding-top:24px;border-top:1px solid var(--rule)}
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr}
+    aside{position:static;height:auto;gap:28px}
+    aside nav{flex-direction:row;flex-wrap:wrap;gap:16px}
+    main{padding:48px 22px 24px}
+    .proj{grid-template-columns:32px 1fr}
+    .proj .stack{grid-column:2;text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside>
+    <div>
+      <div class="avatar" aria-hidden="true">KK</div>
+      <h1>Krishna Kumar</h1>
+      <p class="sub">Senior Software Engineer</p>
+      <nav class="mono">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#path">path</a>
+        <a href="#toolkit">toolkit</a>
+        <a href="#hello">say hello</a>
+      </nav>
+    </div>
+    <div class="socials mono">
+      <a href="https://github.com/GitItKrishna/">github</a>
+      <a href="https://linkedin.com/in/krishna-uh">linkedin</a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about">
+      <span class="eyebrow mono">01 / ABOUT</span>
+      <h2>Hi, I build <em>scalable systems</em> that keep running.</h2>
+      <p class="lead">Senior software engineer with 10+ years building scalable backend and full-stack systems on .NET Core, PostgreSQL, and AWS.</p>
+    </section>
+
+    <section id="projects">
+      <span class="eyebrow mono">02 / PROJECTS</span>
+      <h2>Things I've <em>built</em></h2>
+      <a class="proj" href="https://github.com/GitItKrishna/MultimodalRag"><span class="n mono">01</span><div><h3>MultimodalRag</h3><p>Multimodal RAG pipeline with Redis Stack vector search, Blazor and FastEndpoints, running on local Ollama models.</p></div><span class="stack mono">C# · .NET 10 · Aspire</span></a>
+      <a class="proj" href="https://github.com/GitItKrishna/SmartDoc"><span class="n mono">02</span><div><h3>SmartDoc</h3><p>IntelliDoc, an AI-powered document processing platform.</p></div><span class="stack mono">C# · .NET</span></a>
+      <a class="proj" href="https://github.com/GitItKrishna/SnapCart"><span class="n mono">03</span><div><h3>SnapCart</h3><p>Distributed e-commerce microservices: Catalog and Basket on PostgreSQL, Redis, RabbitMQ and Keycloak, with a Blazor WebAssembly frontend.</p></div><span class="stack mono">C# · Aspire · Blazor</span></a>
+      <a class="proj" href="https://github.com/GitItKrishna/AquaDesk"><span class="n mono">04</span><div><h3>AquaDesk</h3><p>Interactive aquarium live wallpaper for macOS, with photo-cutout fish, shark and turtle that react to your cursor.</p></div><span class="stack mono">Swift · macOS</span></a>
+      <a class="proj" href="https://github.com/GitItKrishna/DotNetBucketry"><span class="n mono">05</span><div><h3>DotNetBucketry</h3><p>Sample repo showing AWS S3 operations from .NET.</p></div><span class="stack mono">C# · AWS S3</span></a>
+    </section>
+
+    <section id="path">
+      <span class="eyebrow mono">03 / PATH</span>
+      <h2>Where I've <em>worked</em></h2>
+      <div class="timeline">
+        <div class="step"><h3>Senior Software Engineer</h3><span class="when mono">10+ years</span><p>Building scalable backend and full-stack systems on .NET Core, PostgreSQL and AWS.</p></div>
+        <div class="step"><h3>Master's in Computer Science</h3><span class="when mono">Education</span></div>
+      </div>
+    </section>
+
+    <section id="toolkit">
+      <span class="eyebrow mono">04 / TOOLKIT</span>
+      <h2>What I <em>reach for</em></h2>
+      <div class="tools">
+        <span>.NET</span><span>Blazor</span><span>PostgreSQL</span><span>SQL Server</span><span>Solr</span><span>Docker</span><span>AWS</span><span>CI/CD</span>
+      </div>
+    </section>
+
+    <section id="hello">
+      <span class="eyebrow mono">05 / HELLO</span>
+      <h2>Let's <em>talk</em></h2>
+      <a class="big-mail" href="mailto:krishna.vr599@gmail.com">krishna.vr599@gmail.com</a>
+    </section>
+
+    <footer class="mono">© <span id="y"></span> Krishna Kumar — hand-built, no templates.</footer>
+  </main>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
